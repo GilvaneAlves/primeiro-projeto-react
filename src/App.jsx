@@ -16,7 +16,10 @@ function App() {
   }
 
   function cliqueiNoBotao() {
-    setList([...list, { id: uuid(), task, finished: false }])
+    if (task) {
+      setList([...list, { id: uuid(), task, finished: false }])
+    }
+
 
   }
   function finalizarTarefa(id) {
